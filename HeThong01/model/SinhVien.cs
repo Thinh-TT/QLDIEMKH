@@ -25,13 +25,6 @@ namespace HeThong01.model
         //Lien ket
         public virtual ICollection<Diem> Diems { get; set; } = new List<Diem>();
 
-
-        //Quan he n-n voi BaiKiemTra
-        public virtual ICollection<BaiKiemTra> BaiKiemTras { get; set; } 
-
-        public SinhVien()
-        {
-            BaiKiemTras = new HashSet<BaiKiemTra>();
-        }
+       
     }
 }

@@ -17,25 +17,12 @@ namespace HeThong01.data
         public DbSet<GiangVien> GiangViens { get;set; }
         public DbSet<BaiKiemTra> BaiKiemTras { get; set; }
         public DbSet<KhoaHoc> KhoaHocs { get; set; }
+        public DbSet<Diem> Diems { get; set; }
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
-        // Cấu hình quan hệ nhiều-nhiều
-        modelBuilder.Entity<SinhVien>()
-            .HasMany(u => u.BaiKiemTras)
-            .WithMany(r => r.SinhViens)
-            .Map(m =>
-            {
-                m.ToTable("SV_BKT");
-                m.MapLeftKey("SinhVien_maSV");
-                m.MapRightKey("BaiKiemTra_maBKT");
-            });
-
         base.OnModelCreating(modelBuilder);
     }
-
-        
-
 
     }
 }

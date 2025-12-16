@@ -21,18 +21,10 @@ namespace HeThong01.model
 
         //Khoa ngoai
         public string KhoaHoc_ma_KH { get; set; }
-        public string SinhVien_ma_SV { get; set; }
 
         //Lien ket
-        public virtual ICollection<Diem> diems { get; set; } = new List<Diem>();
+        public virtual ICollection<Diem> Diems { get; set; } = new List<Diem>();
 
-        //Quan he n-n voi SinhVien
-        public virtual ICollection<SinhVien> SinhViens { get; set; }
-
-        public BaiKiemTra()
-        {
-            SinhViens = new HashSet<SinhVien>();
-        }
-
+       
     }
 }

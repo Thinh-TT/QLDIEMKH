@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,11 @@ namespace HeThong01.model
 
 
         //Khoa ngoai
-        public string GIangVien_ma_GV { get; set; }
+        [ForeignKey("GiangVien")]
+        public string GiangVien_ma_GV { get; set; }
+
+        //Navigation
+        public virtual GiangVien GiangVien { get; set; }
 
         //Lien ket
         public virtual ICollection<BaiKiemTra> BaiKiemTras { get; set; } = new List<BaiKiemTra>();

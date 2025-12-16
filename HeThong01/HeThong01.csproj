@@ -124,9 +124,9 @@
     <Compile Include="fXemDiem.Designer.cs">
       <DependentUpon>fXemDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202512110410414_InitialCreate.cs" />
-    <Compile Include="Migrations\202512110410414_InitialCreate.Designer.cs">
-      <DependentUpon>202512110410414_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202512161520025_InitDB.cs" />
+    <Compile Include="Migrations\202512161520025_InitDB.Designer.cs">
+      <DependentUpon>202512161520025_InitDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="model\BaiKiemTra.cs" />
@@ -169,8 +169,8 @@
     <EmbeddedResource Include="fXemDiem.resx">
       <DependentUpon>fXemDiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202512110410414_InitialCreate.resx">
-      <DependentUpon>202512110410414_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202512161520025_InitDB.resx">
+      <DependentUpon>202512161520025_InitDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
