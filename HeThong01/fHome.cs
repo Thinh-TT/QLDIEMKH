@@ -16,5 +16,16 @@ namespace HeThong01
         {
             InitializeComponent();
         }
+
+        private void fHome_Load(object sender, EventArgs e)
+        {
+            //lblUser.Text = $"Xin chào: {CurrentUser.HoTen} ({CurrentUser.Role})";
+            lblUser.Text = $"Xin chào, Trần Trường Thịnh | Quyền: quản trị viên. ";
+        }
+
+        private void btnNhapDiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

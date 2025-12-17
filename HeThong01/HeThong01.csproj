@@ -46,6 +46,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -199,10 +200,12 @@
   <ItemGroup>
     <Content Include="picture\account.png" />
     <Content Include="picture\admin.png" />
+    <Content Include="picture\education.png" />
     <Content Include="picture\home.png" />
     <Content Include="picture\lecturer.png" />
     <Content Include="picture\logoHutech.png" />
     <Content Include="picture\out.png" />
+    <Content Include="picture\score.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
