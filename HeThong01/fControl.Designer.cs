@@ -43,6 +43,8 @@
             this.taikhoantoolStripComboBox1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thoatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.roleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.thoatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(150, 653);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 653);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,7 +71,7 @@
             this.homeToolStripMenuItem.Image = global::HeThong01.Properties.Resources.home;
             this.homeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(137, 27);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(143, 27);
             this.homeToolStripMenuItem.Text = "&Trang chủ";
             this.homeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
@@ -79,32 +81,34 @@
             this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.qLGiangVienToolStripMenuItem,
             this.qLKhoahocToolStripMenuItem1,
-            this.qLSinhVienToolStripMenuItem});
+            this.qLSinhVienToolStripMenuItem,
+            this.roleToolStripMenuItem,
+            this.userToolStripMenuItem});
             this.adminToolStripMenuItem.Image = global::HeThong01.Properties.Resources.admin;
             this.adminToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(137, 27);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(143, 27);
             this.adminToolStripMenuItem.Text = "&Quản trị viên";
             this.adminToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             // 
             // qLGiangVienToolStripMenuItem
             // 
             this.qLGiangVienToolStripMenuItem.Name = "qLGiangVienToolStripMenuItem";
-            this.qLGiangVienToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.qLGiangVienToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.qLGiangVienToolStripMenuItem.Text = "QL &Giảng viên";
             this.qLGiangVienToolStripMenuItem.Click += new System.EventHandler(this.qLGiangVienToolStripMenuItem_Click);
             // 
             // qLKhoahocToolStripMenuItem1
             // 
             this.qLKhoahocToolStripMenuItem1.Name = "qLKhoahocToolStripMenuItem1";
-            this.qLKhoahocToolStripMenuItem1.Size = new System.Drawing.Size(202, 28);
+            this.qLKhoahocToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
             this.qLKhoahocToolStripMenuItem1.Text = "QL &Khóa học";
             this.qLKhoahocToolStripMenuItem1.Click += new System.EventHandler(this.qLKhoahocToolStripMenuItem1_Click);
             // 
             // qLSinhVienToolStripMenuItem
             // 
             this.qLSinhVienToolStripMenuItem.Name = "qLSinhVienToolStripMenuItem";
-            this.qLSinhVienToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
+            this.qLSinhVienToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.qLSinhVienToolStripMenuItem.Text = "QL &Sinh viên";
             this.qLSinhVienToolStripMenuItem.Click += new System.EventHandler(this.qLSinhVienToolStripMenuItem_Click);
             // 
@@ -118,7 +122,7 @@
             this.giangViênToolStripMenuItem.Image = global::HeThong01.Properties.Resources.lecturer;
             this.giangViênToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.giangViênToolStripMenuItem.Name = "giangViênToolStripMenuItem";
-            this.giangViênToolStripMenuItem.Size = new System.Drawing.Size(137, 27);
+            this.giangViênToolStripMenuItem.Size = new System.Drawing.Size(143, 27);
             this.giangViênToolStripMenuItem.Text = "&Giảng viên";
             this.giangViênToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             // 
@@ -155,7 +159,7 @@
             this.taikhoantoolStripComboBox1.Image = global::HeThong01.Properties.Resources.account;
             this.taikhoantoolStripComboBox1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.taikhoantoolStripComboBox1.Name = "taikhoantoolStripComboBox1";
-            this.taikhoantoolStripComboBox1.Size = new System.Drawing.Size(137, 27);
+            this.taikhoantoolStripComboBox1.Size = new System.Drawing.Size(143, 27);
             this.taikhoantoolStripComboBox1.Text = "Tài &khoản";
             this.taikhoantoolStripComboBox1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.taikhoantoolStripComboBox1.Click += new System.EventHandler(this.taikhoantoolStripComboBox1_Click);
@@ -166,7 +170,7 @@
             this.thoatToolStripMenuItem.Image = global::HeThong01.Properties.Resources._out;
             this.thoatToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(137, 27);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(143, 27);
             this.thoatToolStripMenuItem.Text = "Thoát";
             this.thoatToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
@@ -181,6 +185,20 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1033, 652);
             this.panelContainer.TabIndex = 3;
+            // 
+            // roleToolStripMenuItem
+            // 
+            this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
+            this.roleToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.roleToolStripMenuItem.Text = "Role";
+            this.roleToolStripMenuItem.Click += new System.EventHandler(this.roleToolStripMenuItem_Click);
+            // 
+            // userToolStripMenuItem
+            // 
+            this.userToolStripMenuItem.Name = "userToolStripMenuItem";
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.userToolStripMenuItem.Text = "User";
+            this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
             // 
             // fControl
             // 
@@ -216,5 +234,7 @@
         private System.Windows.Forms.ToolStripMenuItem xemDiemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thongKeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem roleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userToolStripMenuItem;
     }
 }

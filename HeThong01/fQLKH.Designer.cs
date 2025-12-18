@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dgvDanhSachKH = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTai = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbGVphuTrach = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSoTinChi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,17 +44,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaHP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbbGVphuTrach = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnTai = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.dgvDanhSachKH = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachKH)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,15 +66,72 @@
             this.panel1.Size = new System.Drawing.Size(1015, 605);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // dgvDanhSachKH
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Quản lý khóa học ";
+            this.dgvDanhSachKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDanhSachKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSachKH.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dgvDanhSachKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSachKH.Location = new System.Drawing.Point(318, 42);
+            this.dgvDanhSachKH.Name = "dgvDanhSachKH";
+            this.dgvDanhSachKH.RowHeadersWidth = 51;
+            this.dgvDanhSachKH.RowTemplate.Height = 24;
+            this.dgvDanhSachKH.Size = new System.Drawing.Size(685, 551);
+            this.dgvDanhSachKH.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.Controls.Add(this.btnTai);
+            this.panel3.Controls.Add(this.btnXoa);
+            this.panel3.Controls.Add(this.btnSua);
+            this.panel3.Controls.Add(this.btnThem);
+            this.panel3.Location = new System.Drawing.Point(6, 219);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(300, 39);
+            this.panel3.TabIndex = 3;
+            // 
+            // btnTai
+            // 
+            this.btnTai.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTai.Location = new System.Drawing.Point(229, 3);
+            this.btnTai.Name = "btnTai";
+            this.btnTai.Size = new System.Drawing.Size(68, 32);
+            this.btnTai.TabIndex = 10;
+            this.btnTai.Text = "Tải";
+            this.btnTai.UseVisualStyleBackColor = true;
+            this.btnTai.Click += new System.EventHandler(this.btnTai_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(156, 3);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(67, 32);
+            this.btnXoa.TabIndex = 9;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(81, 3);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(69, 32);
+            this.btnSua.TabIndex = 8;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(7, 3);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(73, 32);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
             // 
@@ -93,6 +150,14 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết:";
+            // 
+            // cbbGVphuTrach
+            // 
+            this.cbbGVphuTrach.FormattingEnabled = true;
+            this.cbbGVphuTrach.Location = new System.Drawing.Point(128, 131);
+            this.cbbGVphuTrach.Name = "cbbGVphuTrach";
+            this.cbbGVphuTrach.Size = new System.Drawing.Size(160, 31);
+            this.cbbGVphuTrach.TabIndex = 5;
             // 
             // label5
             // 
@@ -151,79 +216,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã HP:";
             // 
-            // cbbGVphuTrach
+            // label1
             // 
-            this.cbbGVphuTrach.FormattingEnabled = true;
-            this.cbbGVphuTrach.Location = new System.Drawing.Point(128, 131);
-            this.cbbGVphuTrach.Name = "cbbGVphuTrach";
-            this.cbbGVphuTrach.Size = new System.Drawing.Size(160, 31);
-            this.cbbGVphuTrach.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel3.Controls.Add(this.btnTai);
-            this.panel3.Controls.Add(this.btnXoa);
-            this.panel3.Controls.Add(this.btnSua);
-            this.panel3.Controls.Add(this.btnThem);
-            this.panel3.Location = new System.Drawing.Point(6, 219);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 39);
-            this.panel3.TabIndex = 3;
-            // 
-            // btnTai
-            // 
-            this.btnTai.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTai.Location = new System.Drawing.Point(229, 3);
-            this.btnTai.Name = "btnTai";
-            this.btnTai.Size = new System.Drawing.Size(68, 32);
-            this.btnTai.TabIndex = 10;
-            this.btnTai.Text = "Tải";
-            this.btnTai.UseVisualStyleBackColor = true;
-            this.btnTai.Click += new System.EventHandler(this.btnTai_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(156, 3);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(67, 32);
-            this.btnXoa.TabIndex = 9;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(81, 3);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(69, 32);
-            this.btnSua.TabIndex = 8;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(7, 3);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(73, 32);
-            this.btnThem.TabIndex = 7;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // dgvDanhSachKH
-            // 
-            this.dgvDanhSachKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDanhSachKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDanhSachKH.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dgvDanhSachKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhSachKH.Location = new System.Drawing.Point(318, 42);
-            this.dgvDanhSachKH.Name = "dgvDanhSachKH";
-            this.dgvDanhSachKH.RowHeadersWidth = 51;
-            this.dgvDanhSachKH.RowTemplate.Height = 24;
-            this.dgvDanhSachKH.Size = new System.Drawing.Size(685, 551);
-            this.dgvDanhSachKH.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Quản lý khóa học ";
             // 
             // fQLKH
             // 
@@ -233,12 +234,13 @@
             this.Controls.Add(this.panel1);
             this.Name = "fQLKH";
             this.Text = "fQLKH";
+            this.Load += new System.EventHandler(this.fQLKH_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachKH)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachKH)).EndInit();
             this.ResumeLayout(false);
 
         }

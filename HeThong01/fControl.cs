@@ -80,5 +80,15 @@ namespace HeThong01
         {
             this.Close();
         }
+
+        private void roleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadForm(new fRole());
+        }
+
+        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadForm(new fUser());
+        }
     }
 }

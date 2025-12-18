@@ -1,9 +1,12 @@
-﻿using System;
+﻿using HeThong01.data;
+using HeThong01.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +15,8 @@ namespace HeThong01
 {
     public partial class Form1 : Form
     {
+        public User CurrentUser { get; private set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -65,6 +70,40 @@ namespace HeThong01
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string username = txtUserName.Text.Trim();
+            string password = txtPassWord.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (var db = new CouseContext())
+                {
+                    var user = db.Users
+                        .Include("Roles")
+                        .FirstOrDefault(u => u.Username == username && u.IsActive);
+
+                    if (user != null && PasswordHelper.VerifyPassword(password, user.PasswordHash))
+                    {
+                        CurrentUser = user;
+                        this.DialogResult = DialogResult.OK;
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi hệ thống: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             fControl f = new fControl();
             this.Hide();
             f.ShowDialog();

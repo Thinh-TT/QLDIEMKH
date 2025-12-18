@@ -84,6 +84,7 @@
             this.dgvDanhSachGV.RowTemplate.Height = 24;
             this.dgvDanhSachGV.Size = new System.Drawing.Size(685, 551);
             this.dgvDanhSachGV.TabIndex = 2;
+            this.dgvDanhSachGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachGV_CellContentClick);
             // 
             // panel3
             // 
@@ -117,6 +118,7 @@
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -127,6 +129,7 @@
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -137,6 +140,7 @@
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel2
             // 

@@ -113,11 +113,23 @@
     <Compile Include="fQLSV.Designer.cs">
       <DependentUpon>fQLSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="fRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRole.Designer.cs">
+      <DependentUpon>fRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fThongKe.Designer.cs">
       <DependentUpon>fThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUser.Designer.cs">
+      <DependentUpon>fUser.cs</DependentUpon>
     </Compile>
     <Compile Include="fXemDiem.cs">
       <SubType>Form</SubType>
@@ -129,12 +141,19 @@
     <Compile Include="Migrations\202512161520025_InitDB.Designer.cs">
       <DependentUpon>202512161520025_InitDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202512180148498_ThemBangPhanQuyen.cs" />
+    <Compile Include="Migrations\202512180148498_ThemBangPhanQuyen.Designer.cs">
+      <DependentUpon>202512180148498_ThemBangPhanQuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="model\BaiKiemTra.cs" />
     <Compile Include="model\Diem.cs" />
     <Compile Include="model\GiangVien.cs" />
     <Compile Include="model\KhoaHoc.cs" />
+    <Compile Include="model\Role.cs" />
     <Compile Include="model\SinhVien.cs" />
+    <Compile Include="model\User.cs" />
+    <Compile Include="PasswordHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fAccount.resx">
@@ -164,14 +183,23 @@
     <EmbeddedResource Include="fQLSV.resx">
       <DependentUpon>fQLSV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fRole.resx">
+      <DependentUpon>fRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fThongKe.resx">
       <DependentUpon>fThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUser.resx">
+      <DependentUpon>fUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fXemDiem.resx">
       <DependentUpon>fXemDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202512161520025_InitDB.resx">
       <DependentUpon>202512161520025_InitDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202512180148498_ThemBangPhanQuyen.resx">
+      <DependentUpon>202512180148498_ThemBangPhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
