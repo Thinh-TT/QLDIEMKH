@@ -73,6 +73,8 @@ namespace HeThong01
             string username = txtUserName.Text.Trim();
             string password = txtPassWord.Text;
 
+            fControl f = new fControl();
+
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -92,6 +94,8 @@ namespace HeThong01
                         CurrentUser = user;
                         this.DialogResult = DialogResult.OK;
                         this.Hide();
+                        f.ShowDialog();
+                        this.Show();
                     }
                     else
                     {
@@ -103,11 +107,8 @@ namespace HeThong01
             {
                 MessageBox.Show("Lỗi hệ thống: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            fControl f = new fControl();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            
+            
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
