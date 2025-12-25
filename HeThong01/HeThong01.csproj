@@ -138,6 +138,12 @@
     <Compile Include="fRole.Designer.cs">
       <DependentUpon>fRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="fr_InGiangViencs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_InGiangViencs.Designer.cs">
+      <DependentUpon>fr_InGiangViencs.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     <EmbeddedResource Include="fRole.resx">
       <DependentUpon>fRole.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fr_InGiangViencs.resx">
+      <DependentUpon>fr_InGiangViencs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fThongKe.resx">
       <DependentUpon>fThongKe.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,7 +240,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportInGiangVien.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HeThong01.model.GiangVien.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -268,7 +279,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

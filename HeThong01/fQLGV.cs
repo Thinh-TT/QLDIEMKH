@@ -141,7 +141,8 @@ namespace HeThong01
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-
+            fr_InGiangViencs f = new fr_InGiangViencs();
+            f.ShowDialog();
         }
     }
 }
