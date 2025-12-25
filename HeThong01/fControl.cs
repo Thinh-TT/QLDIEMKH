@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HeThong01.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,34 @@ namespace HeThong01
 {
     public partial class fControl : Form
     {
-        public fControl()
+        private User _currentUser;
+        public fControl(User user)
         {
             InitializeComponent();
+            _currentUser = user;
+            PhanQuyenMenu();
         }
+
+        private void PhanQuyenMenu()
+        {
+            if (_currentUser == null) return;
+
+            // Admin
+            if (AuthorizationHelper.IsAdmin(_currentUser))
+            {
+                return; // thấy hết
+            }
+
+            // Giảng viên
+            if (AuthorizationHelper.IsGiangVien(_currentUser))
+            {
+                adminToolStripMenuItem.Visible = false;
+                roleToolStripMenuItem.Visible = false;
+                userToolStripMenuItem.Visible = false;
+                qLKhoahocToolStripMenuItem1.Visible = false;
+            }
+        }
+
         private void LoadForm(Form frm)
         {
             panelContainer.Controls.Clear();
@@ -28,12 +53,12 @@ namespace HeThong01
 
         private void fControl_Load(object sender, EventArgs e)
         {
-            LoadForm(new fHome());
+            LoadForm(new fHome(_currentUser));
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadForm(new fHome());
+            LoadForm(new fHome(_currentUser));
         }
 
         private void qLGiangVienToolStripMenuItem_Click(object sender, EventArgs e)

@@ -35,7 +35,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.cbbChoiceRole = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -43,10 +42,10 @@
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(66, 158);
+            this.txtUserName.Location = new System.Drawing.Point(66, 176);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(241, 31);
-            this.txtUserName.TabIndex = 1;
+            this.txtUserName.TabIndex = 2;
             this.txtUserName.Tag = "username";
             this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
             this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave);
@@ -54,11 +53,11 @@
             // txtPassWord
             // 
             this.txtPassWord.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassWord.Location = new System.Drawing.Point(66, 207);
+            this.txtPassWord.Location = new System.Drawing.Point(66, 234);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.PasswordChar = '*';
             this.txtPassWord.Size = new System.Drawing.Size(241, 31);
-            this.txtPassWord.TabIndex = 2;
+            this.txtPassWord.TabIndex = 3;
             this.txtPassWord.Tag = "username";
             this.txtPassWord.Enter += new System.EventHandler(this.txtPassWord_Enter);
             this.txtPassWord.Leave += new System.EventHandler(this.txtPassWord_Leave);
@@ -97,7 +96,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.Location = new System.Drawing.Point(66, 311);
+            this.btnLogin.Location = new System.Drawing.Point(66, 310);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(241, 36);
             this.btnLogin.TabIndex = 3;
@@ -105,25 +104,12 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // cbbChoiceRole
-            // 
-            this.cbbChoiceRole.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
-            this.cbbChoiceRole.FormattingEnabled = true;
-            this.cbbChoiceRole.Items.AddRange(new object[] {
-            "Giảng viên",
-            "Admin"});
-            this.cbbChoiceRole.Location = new System.Drawing.Point(66, 259);
-            this.cbbChoiceRole.Name = "cbbChoiceRole";
-            this.cbbChoiceRole.Size = new System.Drawing.Size(241, 33);
-            this.cbbChoiceRole.TabIndex = 4;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(382, 453);
-            this.Controls.Add(this.cbbChoiceRole);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUserName);
@@ -135,6 +121,7 @@
             this.Text = "Đăng Nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Enter += new System.EventHandler(this.btnLogin_Click);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -150,7 +137,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.ComboBox cbbChoiceRole;
     }
 }
 

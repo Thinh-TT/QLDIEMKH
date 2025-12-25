@@ -19,9 +19,9 @@ namespace HeThong01
             return IsInRole(user, "Admin");
         }
 
-        public static bool IsStaff(User user)
+        public static bool IsGiangVien(User user)
         {
-            return IsInRole(user, "Staff") || IsAdmin(user);
+            return IsInRole(user, "GiangVien");
         }
     }
 }

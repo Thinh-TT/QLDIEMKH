@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HeThong01.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,20 @@ namespace HeThong01
 {
     public partial class fHome : Form
     {
-        public fHome()
+
+        private User _currentUser;
+        public fHome(User user)
         {
             InitializeComponent();
+            _currentUser = user;
+            string roleName = _currentUser.Roles
+                        .Select(r => r.Name)
+                        .FirstOrDefault() ?? "Không xác định";
+            lblUser.Text = $"Xin chào {_currentUser.FullName} | Quyền: {roleName}";
         }
 
         private void fHome_Load(object sender, EventArgs e)
         {
-            //lblUser.Text = $"Xin chào: {CurrentUser.HoTen} ({CurrentUser.Role})";
-            lblUser.Text = $"Xin chào, Trần Trường Thịnh | Quyền: quản trị viên. ";
         }
 
         private void btnNhapDiem_Click(object sender, EventArgs e)

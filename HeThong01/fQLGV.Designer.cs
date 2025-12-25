@@ -50,6 +50,7 @@
             this.txtMaGV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachGV)).BeginInit();
             this.panel3.SuspendLayout();
@@ -89,13 +90,14 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.Controls.Add(this.btnIn);
             this.panel3.Controls.Add(this.btnTai);
             this.panel3.Controls.Add(this.btnXoa);
             this.panel3.Controls.Add(this.btnSua);
             this.panel3.Controls.Add(this.btnThem);
             this.panel3.Location = new System.Drawing.Point(12, 293);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 39);
+            this.panel3.Size = new System.Drawing.Size(300, 71);
             this.panel3.TabIndex = 1;
             // 
             // btnTai
@@ -280,6 +282,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý thông tin giảng viên";
             // 
+            // btnIn
+            // 
+            this.btnIn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Location = new System.Drawing.Point(229, 36);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(68, 32);
+            this.btnIn.TabIndex = 10;
+            this.btnIn.Text = "In";
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
             // fQLGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -323,5 +336,6 @@
         private System.Windows.Forms.Button btnTai;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnIn;
     }
 }

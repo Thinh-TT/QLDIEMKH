@@ -138,5 +138,10 @@ namespace HeThong01
                     Convert.ToDateTime(dgvDanhSachGV.Rows[e.RowIndex].Cells["ngaySinh"].Value);
             }
         }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

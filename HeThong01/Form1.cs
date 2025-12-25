@@ -46,7 +46,6 @@ namespace HeThong01
             txtUserName.ForeColor = Color.Gray;
             txtPassWord .Text = "PassWord";
             txtPassWord.ForeColor = Color.Gray;
-            cbbChoiceRole.SelectedIndex = 0;
 
         }
 
@@ -73,7 +72,6 @@ namespace HeThong01
             string username = txtUserName.Text.Trim();
             string password = txtPassWord.Text;
 
-            fControl f = new fControl();
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -94,6 +92,7 @@ namespace HeThong01
                         CurrentUser = user;
                         this.DialogResult = DialogResult.OK;
                         this.Hide();
+                        fControl f = new fControl(CurrentUser);
                         f.ShowDialog();
                         this.Show();
                     }
