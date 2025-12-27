@@ -78,7 +78,7 @@ namespace HeThong01
                 MessageBox.Show("Vui lòng nhập đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            
             try
             {
                 using (var db = new CouseContext())
@@ -95,6 +95,11 @@ namespace HeThong01
                         fControl f = new fControl(CurrentUser);
                         f.ShowDialog();
                         this.Show();
+                        txtUserName.Text = "UserName";
+                        txtUserName.ForeColor = Color.Gray;
+                        txtPassWord.Text = "PassWord";
+                        txtPassWord.ForeColor = Color.Gray;
+
                     }
                     else
                     {

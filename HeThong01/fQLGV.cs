@@ -144,5 +144,10 @@ namespace HeThong01
             fr_InGiangViencs f = new fr_InGiangViencs();
             f.ShowDialog();
         }
+
+        private void fQLGV_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
     }
 }

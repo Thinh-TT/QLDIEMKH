@@ -45,7 +45,7 @@
             this.txtUserName.Location = new System.Drawing.Point(66, 176);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(241, 31);
-            this.txtUserName.TabIndex = 2;
+            this.txtUserName.TabIndex = 1;
             this.txtUserName.Tag = "username";
             this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
             this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave);
@@ -57,7 +57,7 @@
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.PasswordChar = '*';
             this.txtPassWord.Size = new System.Drawing.Size(241, 31);
-            this.txtPassWord.TabIndex = 3;
+            this.txtPassWord.TabIndex = 2;
             this.txtPassWord.Tag = "username";
             this.txtPassWord.Enter += new System.EventHandler(this.txtPassWord_Enter);
             this.txtPassWord.Leave += new System.EventHandler(this.txtPassWord_Leave);

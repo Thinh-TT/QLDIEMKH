@@ -73,7 +73,6 @@ namespace HeThong01
         }
 
         
-
         private void fQLKH_Load(object sender, EventArgs e)
         {
             using (var db = new CouseContext())
@@ -91,6 +90,11 @@ namespace HeThong01
                 cbbGVphuTrach.ValueMember = "ma_GV";     // giá trị ngầm
             }
             cbbGVphuTrach.SelectedIndex = -1;
+
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
 
         }
     }
