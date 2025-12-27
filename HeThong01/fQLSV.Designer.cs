@@ -53,6 +53,8 @@
             this.txtMaSV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachSV)).BeginInit();
             this.panel3.SuspendLayout();
@@ -87,17 +89,20 @@
             this.dgvDanhSachSV.RowTemplate.Height = 24;
             this.dgvDanhSachSV.Size = new System.Drawing.Size(685, 551);
             this.dgvDanhSachSV.TabIndex = 2;
+            this.dgvDanhSachSV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachSV_CellContentClick);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.Controls.Add(this.btnTai);
             this.panel3.Controls.Add(this.btnXoa);
+            this.panel3.Controls.Add(this.btnHuy);
             this.panel3.Controls.Add(this.btnSua);
+            this.panel3.Controls.Add(this.btnLuu);
             this.panel3.Controls.Add(this.btnThem);
             this.panel3.Location = new System.Drawing.Point(12, 333);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 39);
+            this.panel3.Size = new System.Drawing.Size(300, 82);
             this.panel3.TabIndex = 99;
             // 
             // btnTai
@@ -120,6 +125,7 @@
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -130,6 +136,7 @@
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -140,6 +147,7 @@
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel2
             // 
@@ -313,6 +321,28 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý thông tin sinh viên";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(7, 41);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(73, 32);
+            this.btnLuu.TabIndex = 7;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(81, 41);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(69, 32);
+            this.btnHuy.TabIndex = 8;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // fQLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -360,5 +390,7 @@
         private System.Windows.Forms.RadioButton rdbNu;
         private System.Windows.Forms.RadioButton rdbNam;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnLuu;
     }
 }

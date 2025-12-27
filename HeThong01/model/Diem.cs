@@ -16,12 +16,19 @@ namespace HeThong01.model
         [Key, Column(Order = 1)]
         public string ma_BKT { get; set; }
 
-        [Required]
-        public int diem { get; set; }
+        //[Required]
+        //public int diem { get; set; }
+        [Range(0, 10)]
+        public float diem { get; set; }
         public string ghiChu {get;set; }
 
+        //public virtual SinhVien SinhVien { get; set; }
+        //public virtual BaiKiemTra BaiKiemTra { get; set; }
+
+        [ForeignKey("ma_SV")]
         public virtual SinhVien SinhVien { get; set; }
+
+        [ForeignKey("ma_BKT")]
         public virtual BaiKiemTra BaiKiemTra { get; set; }
-        
     }
 }                                     

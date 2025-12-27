@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDanhSachBKT = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbbChonHP = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnTai = new System.Windows.Forms.Button();
@@ -39,22 +40,22 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nudHeSo = new System.Windows.Forms.NumericUpDown();
             this.dtpNgayKT = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtHeso = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTenBKT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaBKT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachBKT)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeSo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,16 +86,26 @@
             this.dgvDanhSachBKT.RowTemplate.Height = 24;
             this.dgvDanhSachBKT.Size = new System.Drawing.Size(685, 551);
             this.dgvDanhSachBKT.TabIndex = 2;
+            this.dgvDanhSachBKT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachBKT_CellContentClick);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.cbbChonHP);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Location = new System.Drawing.Point(12, 42);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(300, 74);
             this.panel4.TabIndex = 1;
+            // 
+            // cbbChonHP
+            // 
+            this.cbbChonHP.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cbbChonHP.FormattingEnabled = true;
+            this.cbbChonHP.Location = new System.Drawing.Point(7, 35);
+            this.cbbChonHP.Name = "cbbChonHP";
+            this.cbbChonHP.Size = new System.Drawing.Size(278, 31);
+            this.cbbChonHP.TabIndex = 1;
             // 
             // label8
             // 
@@ -127,6 +138,7 @@
             this.btnTai.TabIndex = 10;
             this.btnTai.Text = "Tải";
             this.btnTai.UseVisualStyleBackColor = true;
+            this.btnTai.Click += new System.EventHandler(this.btnTai_Click);
             // 
             // btnXoa
             // 
@@ -137,6 +149,7 @@
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -147,6 +160,7 @@
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -157,6 +171,7 @@
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel2
             // 
@@ -169,9 +184,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nudHeSo);
             this.groupBox1.Controls.Add(this.dtpNgayKT);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtHeso);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtTenBKT);
             this.groupBox1.Controls.Add(this.label3);
@@ -184,6 +199,29 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết:";
+            // 
+            // nudHeSo
+            // 
+            this.nudHeSo.DecimalPlaces = 1;
+            this.nudHeSo.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudHeSo.Location = new System.Drawing.Point(106, 96);
+            this.nudHeSo.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            65536});
+            this.nudHeSo.Name = "nudHeSo";
+            this.nudHeSo.Size = new System.Drawing.Size(182, 30);
+            this.nudHeSo.TabIndex = 7;
+            this.nudHeSo.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             // 
             // dtpNgayKT
             // 
@@ -201,13 +239,6 @@
             this.label7.Size = new System.Drawing.Size(79, 23);
             this.label7.TabIndex = 0;
             this.label7.Text = "Ngày KT:";
-            // 
-            // txtHeso
-            // 
-            this.txtHeso.Location = new System.Drawing.Point(106, 95);
-            this.txtHeso.Name = "txtHeso";
-            this.txtHeso.Size = new System.Drawing.Size(182, 30);
-            this.txtHeso.TabIndex = 3;
             // 
             // label4
             // 
@@ -260,15 +291,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý bài kiểm tra";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(278, 31);
-            this.comboBox1.TabIndex = 1;
-            // 
             // fQLBaiKT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -277,6 +299,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fQLBaiKT";
             this.Text = "fQLBaiKT";
+            this.Load += new System.EventHandler(this.fQLBaiKT_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachBKT)).EndInit();
@@ -286,6 +309,7 @@
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeSo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,7 +327,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpNgayKT;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtHeso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTenBKT;
         private System.Windows.Forms.Label label3;
@@ -312,6 +335,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbChonHP;
+        private System.Windows.Forms.NumericUpDown nudHeSo;
     }
 }

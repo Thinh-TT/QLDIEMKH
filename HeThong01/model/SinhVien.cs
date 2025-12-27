@@ -20,6 +20,7 @@ namespace HeThong01.model
         public string email_SV { get; set; }
         public string diaChi_SV { get; set; }
         public string SDT_SV { get; set; }
+        [DataType(DataType.Date)]
         public DateTime ngaySinh {  get; set; }
 
         //Lien ket

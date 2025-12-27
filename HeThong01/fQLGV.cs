@@ -29,6 +29,7 @@ namespace HeThong01
             txtDiaChiGV.Clear();
             txtSDTGV.Clear();
             dtpNgaySinhGV.Value = DateTime.Now;
+            txtMaGV.Enabled = true;
         }
 
         private void btnTai_Click(object sender, EventArgs e)
@@ -39,7 +40,29 @@ namespace HeThong01
 
         void LoadData()
         {
-            dgvDanhSachGV.DataSource = db.GiangViens.ToList();
+            var data = db.GiangViens
+        .Select(gv => new
+        {
+            MaGV = gv.ma_GV,
+            HoTen = gv.hoTen_GV,
+            Email = gv.email_GV,
+            DiaChi = gv.diaChi_GV,
+            SDT = gv.SDT_GV,
+            NgaySinh = gv.ngaySinh,
+            SoKhoaHoc = gv.khoaHocs.Count()
+        })
+        .ToList();
+
+            dgvDanhSachGV.DataSource = data;
+
+            // Dat tieu de cot cho dep
+            dgvDanhSachGV.Columns["MaGV"].HeaderText = "Mã giảng viên";
+            dgvDanhSachGV.Columns["HoTen"].HeaderText = "Họ tên";
+            dgvDanhSachGV.Columns["Email"].HeaderText = "Email";
+            dgvDanhSachGV.Columns["DiaChi"].HeaderText = "Địa chỉ";
+            dgvDanhSachGV.Columns["SDT"].HeaderText = "Số điện thoại";
+            dgvDanhSachGV.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            dgvDanhSachGV.Columns["SoKhoaHoc"].HeaderText = "Số HP đang dạy";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -58,6 +81,12 @@ namespace HeThong01
             if (check != null)
             {
                 MessageBox.Show("Mã giảng viên đã tồn tại!");
+                return;
+            }
+
+            if (dtpNgaySinhGV.Value > DateTime.Now)
+            {
+                MessageBox.Show("Ngay sinh khong hop le!");
                 return;
             }
 
@@ -121,6 +150,7 @@ namespace HeThong01
             gv.ngaySinh = dtpNgaySinhGV.Value;
 
             db.SaveChanges();
+            MessageBox.Show("Sửa thành công!");
             LoadData();
             ClearInput();
         }
@@ -129,13 +159,14 @@ namespace HeThong01
         {
             if (e.RowIndex >= 0)
             {
-                txtMaGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["ma_GV"].Value.ToString();
-                txtHoTenGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["hoTen_GV"].Value.ToString();
-                txtEmailGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["email_GV"].Value.ToString();
-                txtDiaChiGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["diaChi_GV"].Value.ToString();
-                txtSDTGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["SDT_GV"].Value.ToString();
+                txtMaGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["MaGV"].Value.ToString();
+                txtHoTenGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
+                txtEmailGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["Email"].Value.ToString();
+                txtDiaChiGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["DiaChi"].Value.ToString();
+                txtSDTGV.Text = dgvDanhSachGV.Rows[e.RowIndex].Cells["SDT"].Value.ToString();
                 dtpNgaySinhGV.Value =
-                    Convert.ToDateTime(dgvDanhSachGV.Rows[e.RowIndex].Cells["ngaySinh"].Value);
+                    Convert.ToDateTime(dgvDanhSachGV.Rows[e.RowIndex].Cells["NgaySinh"].Value);
+                txtMaGV.Enabled = false;
             }
         }
 

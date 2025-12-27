@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -21,6 +22,8 @@ namespace HeThong01.model
 
         //Khoa ngoai
         public string KhoaHoc_ma_KH { get; set; }
+        [ForeignKey("KhoaHoc_ma_KH")]
+        public virtual KhoaHoc KhoaHoc { get; set; }
 
         //Lien ket
         public virtual ICollection<Diem> Diems { get; set; } = new List<Diem>();

@@ -20,6 +20,7 @@ namespace HeThong01.model
         public string diaChi_GV { get; set; }
         [Phone]
         public string SDT_GV { get; set; }
+        [DataType(DataType.Date)]
         public DateTime ngaySinh { get; set; }
 
         //Lien ket

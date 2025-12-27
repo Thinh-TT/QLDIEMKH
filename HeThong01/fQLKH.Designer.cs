@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDanhSachKH = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnIn = new System.Windows.Forms.Button();
             this.btnTai = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.txtMaHP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachKH)).BeginInit();
             this.panel3.SuspendLayout();
@@ -79,6 +79,7 @@
             this.dgvDanhSachKH.RowTemplate.Height = 24;
             this.dgvDanhSachKH.Size = new System.Drawing.Size(685, 551);
             this.dgvDanhSachKH.TabIndex = 4;
+            this.dgvDanhSachKH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachKH_CellContentClick);
             // 
             // panel3
             // 
@@ -92,6 +93,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(300, 78);
             this.panel3.TabIndex = 3;
+            // 
+            // btnIn
+            // 
+            this.btnIn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Location = new System.Drawing.Point(229, 41);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(68, 32);
+            this.btnIn.TabIndex = 10;
+            this.btnIn.Text = "In";
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnTai
             // 
@@ -113,6 +125,7 @@
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -123,6 +136,7 @@
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -227,17 +241,6 @@
             this.label1.Size = new System.Drawing.Size(200, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản lý khóa học ";
-            // 
-            // btnIn
-            // 
-            this.btnIn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.Location = new System.Drawing.Point(229, 41);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(68, 32);
-            this.btnIn.TabIndex = 10;
-            this.btnIn.Text = "In";
-            this.btnIn.UseVisualStyleBackColor = true;
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // fQLKH
             // 
