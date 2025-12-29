@@ -40,12 +40,12 @@
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnFormLogin = new System.Windows.Forms.Button();
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnFormLogin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
@@ -170,9 +170,20 @@
             this.panel2.Size = new System.Drawing.Size(561, 605);
             this.panel2.TabIndex = 1;
             // 
+            // btnFormLogin
+            // 
+            this.btnFormLogin.Location = new System.Drawing.Point(153, 436);
+            this.btnFormLogin.Name = "btnFormLogin";
+            this.btnFormLogin.Size = new System.Drawing.Size(260, 40);
+            this.btnFormLogin.TabIndex = 2;
+            this.btnFormLogin.Text = "Form Login";
+            this.btnFormLogin.UseVisualStyleBackColor = true;
+            this.btnFormLogin.Click += new System.EventHandler(this.btnFormLogin_Click);
+            // 
             // dgvUser
             // 
             this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Location = new System.Drawing.Point(20, 95);
             this.dgvUser.Name = "dgvUser";
@@ -220,16 +231,6 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnFormLogin
-            // 
-            this.btnFormLogin.Location = new System.Drawing.Point(153, 436);
-            this.btnFormLogin.Name = "btnFormLogin";
-            this.btnFormLogin.Size = new System.Drawing.Size(260, 40);
-            this.btnFormLogin.TabIndex = 2;
-            this.btnFormLogin.Text = "Form Login";
-            this.btnFormLogin.UseVisualStyleBackColor = true;
-            this.btnFormLogin.Click += new System.EventHandler(this.btnFormLogin_Click);
             // 
             // fUser
             // 

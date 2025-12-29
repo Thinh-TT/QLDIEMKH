@@ -154,7 +154,7 @@ namespace HeThong01
                 float tongHeSoKhac = db.BaiKiemTras
                     .Where(b => b.KhoaHoc_ma_KH == maKH && b.ma_BKT != bkt.ma_BKT)
                     .Sum(b => (float?)b.heSo) ?? 0;
-                if (tongHeSoKhac + heSoMoi > 1.0f)
+                if (tongHeSoKhac + heSoMoi > 1.0001f)
                 {
                     MessageBox.Show("Tổng hệ số vượt quá 1.0!");
                     return;

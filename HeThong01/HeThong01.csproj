@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="AuthorizationHelper.cs" />
     <Compile Include="data\CouseContext.cs" />
+    <Compile Include="DiemNhapDTO.cs" />
     <Compile Include="fAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,11 +145,17 @@
     <Compile Include="fr_InGiangViencs.Designer.cs">
       <DependentUpon>fr_InGiangViencs.cs</DependentUpon>
     </Compile>
-    <Compile Include="fThongKe.cs">
+    <Compile Include="fThongKeHP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fThongKe.Designer.cs">
-      <DependentUpon>fThongKe.cs</DependentUpon>
+    <Compile Include="fThongKeHP.Designer.cs">
+      <DependentUpon>fThongKeHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongKeSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongKeSV.Designer.cs">
+      <DependentUpon>fThongKeSV.cs</DependentUpon>
     </Compile>
     <Compile Include="fUser.cs">
       <SubType>Form</SubType>
@@ -186,6 +193,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThongKeHocPhanDTO.cs" />
+    <Compile Include="ThongKeService.cs" />
+    <Compile Include="ThongKeSinhVienDTO.cs" />
     <EmbeddedResource Include="fAccount.resx">
       <DependentUpon>fAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,8 +229,11 @@
     <EmbeddedResource Include="fr_InGiangViencs.resx">
       <DependentUpon>fr_InGiangViencs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fThongKe.resx">
-      <DependentUpon>fThongKe.cs</DependentUpon>
+    <EmbeddedResource Include="fThongKeHP.resx">
+      <DependentUpon>fThongKeHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongKeSV.resx">
+      <DependentUpon>fThongKeSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fUser.resx">
       <DependentUpon>fUser.cs</DependentUpon>

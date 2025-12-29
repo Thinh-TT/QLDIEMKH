@@ -29,12 +29,12 @@ namespace HeThong01
             txtSoTinChi.Clear();
             cbbGVphuTrach.SelectedIndex = -1;
             txtMaHP.Enabled = true;
-            LoadData();
         }
 
         private void btnTai_Click(object sender, EventArgs e)
         {
             clearInput();
+            LoadData();
         }
 
         void LoadData()
@@ -94,6 +94,7 @@ namespace HeThong01
             };
             db.KhoaHocs.Add(hp);
             db.SaveChanges();
+            MessageBox.Show("Thêm học phần thành công!");
             LoadData();
             clearInput();
         }
@@ -102,17 +103,18 @@ namespace HeThong01
         private void fQLKH_Load(object sender, EventArgs e)
         {
             LoadGiangVien();
+            LoadData();
         }
 
-        private void LoadGiangVien()
+        void LoadGiangVien()
         {
             cbbGVphuTrach.DataSource = db.GiangViens
-                    .Select(gv => new
-                    {
-                        gv.ma_GV,
-                        gv.hoTen_GV
-                    })
-                    .ToList();
+                .Select(gv => new
+                {
+                    gv.ma_GV,
+                    gv.hoTen_GV
+                })
+                .ToList();
 
             cbbGVphuTrach.DisplayMember = "hoTen_GV";
             cbbGVphuTrach.ValueMember = "ma_GV";
@@ -159,6 +161,7 @@ namespace HeThong01
             kh.GiangVien_ma_GV = cbbGVphuTrach.SelectedValue.ToString();
 
             db.SaveChanges();
+            MessageBox.Show("Cập nhật học phần thành công!");
             LoadData();
             clearInput();
         }

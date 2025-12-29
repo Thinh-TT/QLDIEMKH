@@ -37,6 +37,7 @@ namespace HeThong01
             txtDiaChiSV.Clear();
             txtSDTSV.Clear();
             dtpNgaySinhSV.Value = DateTime.Now;
+            txtMaSV.ReadOnly = false;
         }
 
         private void fQLSV_Load(object sender, EventArgs e)
@@ -89,6 +90,7 @@ namespace HeThong01
             txtDiaChiSV.Text = dgvDanhSachSV.Rows[e.RowIndex].Cells["diaChi_SV"].Value?.ToString();
             txtSDTSV.Text = dgvDanhSachSV.Rows[e.RowIndex].Cells["SDT_SV"].Value?.ToString();
             dtpNgaySinhSV.Value = Convert.ToDateTime(dgvDanhSachSV.Rows[e.RowIndex].Cells["ngaySinh"].Value);
+            txtMaSV.ReadOnly = true;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -161,6 +163,8 @@ namespace HeThong01
                 };
 
                 db.SinhViens.Add(sv);
+                MessageBox.Show("Thêm sinh viên thành công!");
+                clearInput();
             }
             else
             {
@@ -216,6 +220,11 @@ namespace HeThong01
         private void btnHuy_Click(object sender, EventArgs e)
         {
             SetButtonState(true);
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

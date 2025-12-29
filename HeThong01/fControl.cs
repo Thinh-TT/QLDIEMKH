@@ -86,14 +86,9 @@ namespace HeThong01
             LoadForm(new fNhapDiem());
         }
 
-        private void xemDiemToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LoadForm(new fXemDiem());
-        }
-
         private void thongKeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadForm(new fThongKe());
+            LoadForm(new fThongKeHP());
         }
 
         private void taikhoantoolStripComboBox1_Click(object sender, EventArgs e)
@@ -114,6 +109,11 @@ namespace HeThong01
         private void userToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadForm(new fUser());
+        }
+
+        private void ThongkeSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadForm(new fThongKeSV());
         }
     }
 }

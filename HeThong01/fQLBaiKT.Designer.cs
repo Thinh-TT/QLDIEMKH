@@ -126,7 +126,7 @@
             this.panel3.Controls.Add(this.btnThem);
             this.panel3.Location = new System.Drawing.Point(12, 316);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 39);
+            this.panel3.Size = new System.Drawing.Size(300, 43);
             this.panel3.TabIndex = 1;
             // 
             // btnTai

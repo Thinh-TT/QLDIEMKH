@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(240, 63);
+            this.label1.Location = new System.Drawing.Point(7, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 31);
             this.label1.TabIndex = 0;
@@ -52,26 +52,26 @@
             // txtRoleName
             // 
             this.txtRoleName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold);
-            this.txtRoleName.Location = new System.Drawing.Point(373, 59);
+            this.txtRoleName.Location = new System.Drawing.Point(140, 79);
             this.txtRoleName.Name = "txtRoleName";
-            this.txtRoleName.Size = new System.Drawing.Size(100, 38);
+            this.txtRoleName.Size = new System.Drawing.Size(167, 38);
             this.txtRoleName.TabIndex = 1;
             // 
             // dgvRole
             // 
             this.dgvRole.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRole.Location = new System.Drawing.Point(246, 114);
+            this.dgvRole.Location = new System.Drawing.Point(341, 79);
             this.dgvRole.Name = "dgvRole";
             this.dgvRole.RowHeadersWidth = 51;
             this.dgvRole.RowTemplate.Height = 24;
-            this.dgvRole.Size = new System.Drawing.Size(300, 150);
+            this.dgvRole.Size = new System.Drawing.Size(496, 282);
             this.dgvRole.TabIndex = 2;
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(246, 292);
+            this.btnAdd.Location = new System.Drawing.Point(13, 178);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 39);
             this.btnAdd.TabIndex = 3;
@@ -82,7 +82,7 @@
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(346, 292);
+            this.btnEdit.Location = new System.Drawing.Point(113, 178);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(94, 39);
             this.btnEdit.TabIndex = 3;
@@ -93,7 +93,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(446, 292);
+            this.btnDelete.Location = new System.Drawing.Point(213, 178);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 39);
             this.btnDelete.TabIndex = 3;
@@ -104,7 +104,7 @@
             // btnLoad
             // 
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoad.Location = new System.Drawing.Point(246, 337);
+            this.btnLoad.Location = new System.Drawing.Point(13, 223);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(94, 39);
             this.btnLoad.TabIndex = 3;
@@ -115,7 +115,7 @@
             // btnFormUser
             // 
             this.btnFormUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFormUser.Location = new System.Drawing.Point(346, 337);
+            this.btnFormUser.Location = new System.Drawing.Point(113, 223);
             this.btnFormUser.Name = "btnFormUser";
             this.btnFormUser.Size = new System.Drawing.Size(194, 39);
             this.btnFormUser.TabIndex = 3;

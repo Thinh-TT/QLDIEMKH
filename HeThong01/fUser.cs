@@ -162,6 +162,7 @@ namespace HeThong01
             lbxRole.DataSource = db.Roles.ToList();
             lbxRole.DisplayMember = "Name";
             lbxRole.ValueMember = "Id";
+            LoadData();
         }
 
         private void btnFormLogin_Click(object sender, EventArgs e)
