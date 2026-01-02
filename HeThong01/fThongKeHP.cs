@@ -124,7 +124,6 @@ namespace HeThong01
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

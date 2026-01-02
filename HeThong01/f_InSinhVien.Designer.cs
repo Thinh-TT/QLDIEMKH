@@ -35,17 +35,19 @@
             // 
             this.rpvInSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpvInSinhVien.Location = new System.Drawing.Point(0, 0);
+            this.rpvInSinhVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rpvInSinhVien.Name = "rpvInSinhVien";
             this.rpvInSinhVien.ServerReport.BearerToken = null;
-            this.rpvInSinhVien.Size = new System.Drawing.Size(800, 450);
+            this.rpvInSinhVien.Size = new System.Drawing.Size(1025, 536);
             this.rpvInSinhVien.TabIndex = 0;
             // 
             // f_InSinhVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1025, 536);
             this.Controls.Add(this.rpvInSinhVien);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "f_InSinhVien";
             this.Text = "f_InSinhVien";
             this.Load += new System.EventHandler(this.f_InSinhVien_Load);

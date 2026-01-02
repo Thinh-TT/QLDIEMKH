@@ -123,7 +123,8 @@ namespace HeThong01
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-
+            f_InKhoaHoc fInKH = new f_InKhoaHoc();
+            fInKH.ShowDialog();
         }
 
         private void dgvDanhSachKH_CellContentClick(object sender, DataGridViewCellEventArgs e)

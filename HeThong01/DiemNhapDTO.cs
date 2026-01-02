@@ -12,5 +12,6 @@ namespace HeThong01
         public string TenSV { get; set; }
         public float? Diem { get; set; }
         public string GhiChu { get; set; }
+        public string MaBKT { get; set; }
     }
 }

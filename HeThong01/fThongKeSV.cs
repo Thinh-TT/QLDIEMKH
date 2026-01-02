@@ -102,5 +102,9 @@ namespace HeThong01
             dgvThongKeSV.DataSource = null;
             lblthongtin.Text = "...";
         }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

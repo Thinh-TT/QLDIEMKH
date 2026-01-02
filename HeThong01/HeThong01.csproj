@@ -169,6 +169,24 @@
     <Compile Include="fXemDiem.Designer.cs">
       <DependentUpon>fXemDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="f_InDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_InDiem.Designer.cs">
+      <DependentUpon>f_InDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_InKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_InKhoaHoc.Designer.cs">
+      <DependentUpon>f_InKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_InSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_InSinhVien.Designer.cs">
+      <DependentUpon>f_InSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202512161520025_InitDB.cs" />
     <Compile Include="Migrations\202512161520025_InitDB.Designer.cs">
       <DependentUpon>202512161520025_InitDB.cs</DependentUpon>
@@ -241,6 +259,15 @@
     <EmbeddedResource Include="fXemDiem.resx">
       <DependentUpon>fXemDiem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="f_InDiem.resx">
+      <DependentUpon>f_InDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_InKhoaHoc.resx">
+      <DependentUpon>f_InKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_InSinhVien.resx">
+      <DependentUpon>f_InSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202512161520025_InitDB.resx">
       <DependentUpon>202512161520025_InitDB.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +288,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReportInGiangVien.rdlc" />
+    <EmbeddedResource Include="Report\ReportInGiangVien.rdlc" />
+    <EmbeddedResource Include="Report\Report_InDiem.rdlc" />
+    <EmbeddedResource Include="Report\Report_InKhoaHoc.rdlc" />
+    <EmbeddedResource Include="Report\Report_InSinhVien.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\HeThong01.model.GiangVien.datasource" />
     <None Include="Properties\Settings.settings">
@@ -283,6 +314,7 @@
     <Content Include="picture\home.png" />
     <Content Include="picture\lecturer.png" />
     <Content Include="picture\logoHutech.png" />
+    <Content Include="picture\logoHutechVuong.png" />
     <Content Include="picture\out.png" />
     <Content Include="picture\score.png" />
     <Content Include="SqlServerTypes\readme.htm" />

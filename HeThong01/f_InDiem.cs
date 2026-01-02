@@ -14,9 +14,15 @@ namespace HeThong01
 {
     public partial class f_InDiem : Form
     {
+        private string _maBKT;
         public f_InDiem()
         {
             InitializeComponent();
+        }
+        public f_InDiem(string maBKT)
+        {
+            InitializeComponent();
+            _maBKT = maBKT;
         }
 
         private void f_InDiem_Load(object sender, EventArgs e)
@@ -25,14 +31,28 @@ namespace HeThong01
             using (var db = new CouseContext())
             {
                 // Lấy danh sách danh mục từ cơ sở dữ liệu sử dụng Entity Framework lấy chỉ id và tên danh mục
-                var diems = db.Diems
-                    .Select(c => new
-                    {
-                        SinhVien = c.SinhVien.hoTen_SV,
-                        BaiKiemTra = c.BaiKiemTra.ten_BKT,
-                        c.diem
-                    })
-                    .ToList();
+                //var diems = db.Diems
+                //    .Select(c => new
+                //    {
+                //        SinhVien = c.SinhVien.hoTen_SV,
+                //        BaiKiemTra = c.BaiKiemTra.ten_BKT,
+                //        c.diem
+                //    })
+                //    .ToList();
+
+                var diems = (from d in db.Diems
+                             join sv in db.SinhViens
+                             on d.ma_SV equals sv.ma_SV
+                             where d.ma_BKT == _maBKT
+                             select new DiemNhapDTO
+                             {
+                                 MaSV = sv.ma_SV,
+                                 TenSV = sv.hoTen_SV,
+                                 Diem = d.diem,
+                                 GhiChu = d.ghiChu,
+                                 MaBKT = d.ma_BKT
+                             }).ToList();
+
 
                 // Thiết lập file rdlc cho ReportViewer
                 rpvInDiem.LocalReport.ReportPath = "Report_InDiem.rdlc";

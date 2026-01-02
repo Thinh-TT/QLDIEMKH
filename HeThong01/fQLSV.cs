@@ -224,7 +224,8 @@ namespace HeThong01
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-
+            f_InSinhVien fInSV = new f_InSinhVien();
+            fInSV.ShowDialog();
         }
     }
 }

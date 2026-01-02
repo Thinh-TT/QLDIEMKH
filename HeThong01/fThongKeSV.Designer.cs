@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblthongtin = new System.Windows.Forms.Label();
             this.dgvThongKeSV = new System.Windows.Forms.DataGridView();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnReLoad = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.cbbSinhVien = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblthongtin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKeSV)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,16 @@
             this.panel1.Size = new System.Drawing.Size(1015, 605);
             this.panel1.TabIndex = 3;
             // 
+            // lblthongtin
+            // 
+            this.lblthongtin.AutoSize = true;
+            this.lblthongtin.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblthongtin.Location = new System.Drawing.Point(12, 85);
+            this.lblthongtin.Name = "lblthongtin";
+            this.lblthongtin.Size = new System.Drawing.Size(77, 31);
+            this.lblthongtin.TabIndex = 5;
+            this.lblthongtin.Text = "label2";
+            // 
             // dgvThongKeSV
             // 
             this.dgvThongKeSV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -79,6 +89,7 @@
             this.btnIn.TabIndex = 3;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnReLoad
             // 
@@ -120,16 +131,6 @@
             this.label1.Size = new System.Drawing.Size(208, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thống kê sinh viên";
-            // 
-            // lblthongtin
-            // 
-            this.lblthongtin.AutoSize = true;
-            this.lblthongtin.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblthongtin.Location = new System.Drawing.Point(12, 85);
-            this.lblthongtin.Name = "lblthongtin";
-            this.lblthongtin.Size = new System.Drawing.Size(77, 31);
-            this.lblthongtin.TabIndex = 5;
-            this.lblthongtin.Text = "label2";
             // 
             // fThongKeSV
             // 
