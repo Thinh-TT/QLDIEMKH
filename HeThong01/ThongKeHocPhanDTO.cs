@@ -10,7 +10,7 @@ namespace HeThong01
     {
         public string MaSV { get; set; }
         public string TenSV { get; set; }
-        public float DiemTongKet { get; set; }
+        public double? DiemTongKet { get; set; }
         public string XepLoai { get; set; }
     }
 }

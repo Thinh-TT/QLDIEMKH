@@ -11,7 +11,10 @@ namespace HeThong01.data
     internal class CouseContext : DbContext
     {
 
-        public CouseContext() : base("name = DefaultConnection") { }
+        public CouseContext() : base("name = DefaultConnection") 
+        {
+            Database.SetInitializer<CouseContext>(null);
+        }
 
         public DbSet<SinhVien> SinhViens { get; set; }
         public DbSet<GiangVien> GiangViens { get;set; }

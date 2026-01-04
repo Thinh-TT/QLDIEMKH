@@ -20,11 +20,11 @@ namespace HeThong01
                 .Select(d => d.diem * d.BaiKiemTra.heSo)
                 .ToList();
 
-            return dsDiem.Any() ? dsDiem.Sum() : 0;
+            return dsDiem.Any() ? (float)dsDiem.Sum() : 0f;
         }
 
         // Xếp loại học lực
-        public string XepLoai(float diem)
+        public string XepLoai(double diem)
         {
             if (diem >= 8.5) return "Giỏi";
             if (diem >= 7.0) return "Khá";

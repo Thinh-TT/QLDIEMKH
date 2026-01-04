@@ -1,5 +1,6 @@
 ﻿using HeThong01.data;
 using HeThong01.model;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,22 +13,25 @@ using System.Windows.Forms;
 
 namespace HeThong01
 {
-    public partial class f_InDiem : Form
+    public partial class f_InThongKeHP : Form
     {
-        private string _maBKT;
-        public f_InDiem()
+        private List<ThongKeHocPhanDTO> _tkHP;
+        private string _maMH;
+        private string _tenMH;
+        
+        
+        public f_InThongKeHP(List<ThongKeHocPhanDTO> tkHP,string maMH, string tenMH)
         {
             InitializeComponent();
-        }
-        public f_InDiem(string maBKT)
-        {
-            InitializeComponent();
-            _maBKT = maBKT;
+            _tkHP = tkHP;
+            _maMH = maMH;
+            _tenMH = tenMH;
+            
         }
 
         private void f_InDiem_Load(object sender, EventArgs e)
         {
-
+            
             using (var db = new CouseContext())
             {
                 // Lấy danh sách danh mục từ cơ sở dữ liệu sử dụng Entity Framework lấy chỉ id và tên danh mục
@@ -41,36 +45,41 @@ namespace HeThong01
                 //    .ToList();
 
                 var diems = (from d in db.Diems
-                             join sv in db.SinhViens
-                             on d.ma_SV equals sv.ma_SV
-                             where d.ma_BKT == _maBKT
-                             select new DiemNhapDTO
+                             join sv in db.SinhViens on d.ma_SV equals sv.ma_SV
+                             join bkt in db.BaiKiemTras on d.ma_BKT equals bkt.ma_BKT
+                             join kh in db.KhoaHocs on bkt.KhoaHoc_ma_KH equals kh.ma_KH
+                             where kh.ma_KH == _maMH
+                             select new ThongKeHocPhanDTO
                              {
                                  MaSV = sv.ma_SV,
                                  TenSV = sv.hoTen_SV,
-                                 Diem = d.diem,
-                                 GhiChu = d.ghiChu,
-                                 MaBKT = d.ma_BKT
+                                 DiemTongKet = d.diem,
+                                
+                                 
                              }).ToList();
+
+                
 
 
                 // Thiết lập file rdlc cho ReportViewer
-                rpvInDiem.LocalReport.ReportPath = "Report_InDiem.rdlc";
+                rpvInDiem.LocalReport.ReportPath = "Report_InTheoHocPhan.rdlc";
 
 
                 string ngayThang = "Ngày " + DateTime.Now.Day + " Tháng " + DateTime.Now.Month + " Năm " + DateTime.Now.Year;
-
+                
 
                 // pass value cho tham số trong báo cáo
                 Microsoft.Reporting.WinForms.ReportParameter[] reportParameters = new Microsoft.Reporting.WinForms.ReportParameter[]
                 {
             new Microsoft.Reporting.WinForms.ReportParameter("ngayThang", ngayThang),
+            new ReportParameter("tenKhoaHoc", _tenMH)
                 };
 
                 rpvInDiem.LocalReport.SetParameters(reportParameters);
+                
 
                 rpvInDiem.LocalReport.DataSources.Clear();
-                rpvInDiem.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSetDiem", diems));
+                rpvInDiem.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSetDiem", _tkHP));
 
 
                 rpvInDiem.RefreshReport();

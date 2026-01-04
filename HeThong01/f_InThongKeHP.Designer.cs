@@ -1,6 +1,6 @@
 ﻿namespace HeThong01
 {
-    partial class f_InDiem
+    partial class f_InThongKeHP
     {
         /// <summary>
         /// Required designer variable.

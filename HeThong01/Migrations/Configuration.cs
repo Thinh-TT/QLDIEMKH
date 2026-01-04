@@ -10,6 +10,7 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "HeThong01.CouseContext";
         }
 
         protected override void Seed(HeThong01.data.CouseContext context)

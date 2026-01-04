@@ -1,4 +1,5 @@
 ﻿using HeThong01.data;
+using HeThong01.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace HeThong01
     public partial class fThongKeSV : Form
     {
         CouseContext db = new CouseContext();
+        private float _gpa;
+        private string _xepLoai;
         public fThongKeSV()
         {
             InitializeComponent();
@@ -54,7 +57,7 @@ namespace HeThong01
                     MaKH = g.Key.ma_KH,
                     TenKH = g.Key.ten_KH,
                     SoTinChi = g.Key.So_TC,
-                    DiemTongKet = g.Sum(x => x.diem * x.BaiKiemTra.heSo)
+                    DiemTongKet = (float)g.Sum(x => x.diem * x.BaiKiemTra.heSo)
                 })
                 .ToList();
 
@@ -92,8 +95,10 @@ namespace HeThong01
             var data = ThongKeTheoSinhVien(maSV);
             dgvThongKeSV.DataSource = data;
 
-            float gpa = TinhGPA(data);
-            lblthongtin.Text = $"GPA: {gpa:F2} | Xếp loại: {XepLoai(gpa)}";
+            _gpa = TinhGPA(data);
+            _xepLoai = XepLoai(_gpa);
+
+            lblthongtin.Text = $"GPA: {_gpa:F2} | Xếp loại: {_xepLoai}";
         }
 
         private void btnReLoad_Click(object sender, EventArgs e)
@@ -105,6 +110,41 @@ namespace HeThong01
 
         private void btnIn_Click(object sender, EventArgs e)
         {
+            if (dgvThongKeSV.Rows.Count == 0)
+            {
+                MessageBox.Show("Chưa có dữ liệu để in");
+                return;
+            }
+
+            List<ThongKeSinhVienDTO> tkSV = new List<ThongKeSinhVienDTO>();
+
+            foreach (DataGridViewRow row in dgvThongKeSV.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                tkSV.Add(new ThongKeSinhVienDTO
+                {
+                    MaKH = row.Cells["MaKH"].Value.ToString(),
+                    TenKH = row.Cells["TenKH"].Value.ToString(),
+                    DiemTongKet = Convert.ToSingle(row.Cells["DiemTongKet"].Value),
+                    SoTinChi = Convert.ToInt32(row.Cells["SoTinChi"].Value)
+                });
+            }
+
+            string maSV = cbbSinhVien.SelectedValue.ToString();
+            string tenSV = cbbSinhVien.Text;
+
+            f_InTheoSinhVien f = new f_InTheoSinhVien(
+                tkSV,
+                maSV,
+                tenSV,
+                _gpa,
+                _xepLoai
+            );
+
+            f.ShowDialog();
         }
+
+        
     }
 }

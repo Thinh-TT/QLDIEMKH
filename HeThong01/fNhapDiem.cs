@@ -86,7 +86,7 @@ namespace HeThong01
                         {
                             MaSV = sv.ma_SV,
                             TenSV = sv.hoTen_SV,
-                            Diem = diem != null ? diem.diem : (float?)null,
+                            Diem = diem != null ? (float?)diem.diem : (float?)null,
                             GhiChu = diem != null ? diem.ghiChu : ""
                         }).ToList();
 
@@ -167,8 +167,8 @@ namespace HeThong01
             }
 
             string maBKT = cbbBaiKT.SelectedValue.ToString();
-            f_InDiem f = new f_InDiem(maBKT); 
-            f.ShowDialog();
+            //f_InDiem f = new f_InDiem(); 
+            //f.ShowDialog();
         }
     }
 }

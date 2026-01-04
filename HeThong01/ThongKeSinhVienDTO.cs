@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace HeThong01
 {
-    internal class ThongKeSinhVienDTO
+    public class ThongKeSinhVienDTO
     {
         public string MaKH { get; set; }
         public string TenKH { get; set; }
         public float DiemTongKet { get; set; }
         public int SoTinChi { get; set; }
+        public string XepLoai {  get; set; }
     }
 }

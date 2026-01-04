@@ -15,9 +15,12 @@ namespace HeThong01
     public partial class fThongKeHP : Form
     {
         CouseContext db = new CouseContext();
+        
+        
         public fThongKeHP()
         {
             InitializeComponent();
+            
         }
 
         private void fThongKeHP_Load(object sender, EventArgs e)
@@ -62,7 +65,7 @@ namespace HeThong01
 
             foreach (var sv in dsSV)
             {
-                float diem = service.TinhDiemTongKet(sv.ma_SV, maKH);
+                double diem = service.TinhDiemTongKet(sv.ma_SV, maKH);
 
                 result.Add(new ThongKeHocPhanDTO
                 {
@@ -124,6 +127,25 @@ namespace HeThong01
 
         private void btnIn_Click(object sender, EventArgs e)
         {
+            List<ThongKeHocPhanDTO> tkHP = new List<ThongKeHocPhanDTO>();
+
+            foreach (DataGridViewRow row in dgvThongKeHP.Rows)
+            {
+                tkHP.Add(new ThongKeHocPhanDTO
+                {
+                    MaSV = row.Cells["MaSV"].Value.ToString(),
+                    TenSV = row.Cells["TenSV"].Value.ToString(),
+                    DiemTongKet = Convert.ToDouble(row.Cells["DiemTongKet"].Value)
+
+                });
+            }    
+
+
+            string maMH = cbbHocPhan.SelectedValue.ToString();
+            string tenMH = cbbHocPhan.Text;
+
+            f_InThongKeHP f = new f_InThongKeHP(tkHP,maMH, tenMH);
+            f.ShowDialog();
         }
     }
 }
