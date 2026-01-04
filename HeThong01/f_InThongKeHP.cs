@@ -35,33 +35,33 @@ namespace HeThong01
             using (var db = new CouseContext())
             {
                 // Lấy danh sách danh mục từ cơ sở dữ liệu sử dụng Entity Framework lấy chỉ id và tên danh mục
-                //var diems = db.Diems
-                //    .Select(c => new
-                //    {
-                //        SinhVien = c.SinhVien.hoTen_SV,
-                //        BaiKiemTra = c.BaiKiemTra.ten_BKT,
-                //        c.diem
-                //    })
-                //    .ToList();
+                var diems = db.Diems
+                    .Select(c => new
+                    {
+                        SinhVien = c.SinhVien.hoTen_SV,
+                        BaiKiemTra = c.BaiKiemTra.ten_BKT,
+                        c.diem
+                    })
+                    .ToList();
 
-                var diems = (from d in db.Diems
-                             join sv in db.SinhViens on d.ma_SV equals sv.ma_SV
-                             join bkt in db.BaiKiemTras on d.ma_BKT equals bkt.ma_BKT
-                             join kh in db.KhoaHocs on bkt.KhoaHoc_ma_KH equals kh.ma_KH
-                             where kh.ma_KH == _maMH
-                             select new ThongKeHocPhanDTO
-                             {
-                                 MaSV = sv.ma_SV,
-                                 TenSV = sv.hoTen_SV,
-                                 DiemTongKet = d.diem,
-                                
-                                 
-                             }).ToList();
-
-                
+                //var diems = (from d in db.Diems
+                //             join sv in db.SinhViens on d.ma_SV equals sv.ma_SV
+                //             join bkt in db.BaiKiemTras on d.ma_BKT equals bkt.ma_BKT
+                //             join kh in db.KhoaHocs on bkt.KhoaHoc_ma_KH equals kh.ma_KH
+                //             where kh.ma_KH == _maMH
+                //             select new ThongKeHocPhanDTO
+                //             {
+                //                 MaSV = sv.ma_SV,
+                //                 TenSV = sv.hoTen_SV,
+                //                 DiemTongKet = d.diem,
 
 
-                // Thiết lập file rdlc cho ReportViewer
+                //             }).ToList();
+
+
+
+
+                //// Thiết lập file rdlc cho ReportViewer
                 rpvInDiem.LocalReport.ReportPath = "Report_InTheoHocPhan.rdlc";
 
 

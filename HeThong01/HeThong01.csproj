@@ -209,9 +209,9 @@
     <Compile Include="Migrations\202512270938110_fixdatabase.Designer.cs">
       <DependentUpon>202512270938110_fixdatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202601030154096_ThemDuLieu.cs" />
-    <Compile Include="Migrations\202601030154096_ThemDuLieu.Designer.cs">
-      <DependentUpon>202601030154096_ThemDuLieu.cs</DependentUpon>
+    <Compile Include="Migrations\202512301243516_ThemDuLieu.cs" />
+    <Compile Include="Migrations\202512301243516_ThemDuLieu.Designer.cs">
+      <DependentUpon>202512301243516_ThemDuLieu.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202601030947314_SuaKieuDuLieu.cs" />
     <Compile Include="Migrations\202601030947314_SuaKieuDuLieu.Designer.cs">
@@ -297,8 +297,8 @@
     <EmbeddedResource Include="Migrations\202512270938110_fixdatabase.resx">
       <DependentUpon>202512270938110_fixdatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202601030154096_ThemDuLieu.resx">
-      <DependentUpon>202601030154096_ThemDuLieu.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202512301243516_ThemDuLieu.resx">
+      <DependentUpon>202512301243516_ThemDuLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202601030947314_SuaKieuDuLieu.resx">
       <DependentUpon>202601030947314_SuaKieuDuLieu.cs</DependentUpon>

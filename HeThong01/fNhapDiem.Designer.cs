@@ -40,7 +40,6 @@
             this.cbbHocPhan = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachDiem)).BeginInit();
             this.panel3.SuspendLayout();
@@ -78,7 +77,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel3.Controls.Add(this.btnIn);
             this.panel3.Controls.Add(this.btnReLoad);
             this.panel3.Controls.Add(this.btnLuu);
             this.panel3.Location = new System.Drawing.Point(12, 265);
@@ -181,17 +179,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập điểm";
             // 
-            // btnIn
-            // 
-            this.btnIn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.Location = new System.Drawing.Point(156, 3);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(69, 32);
-            this.btnIn.TabIndex = 8;
-            this.btnIn.Text = "In";
-            this.btnIn.UseVisualStyleBackColor = true;
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
-            // 
             // fNhapDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,6 +212,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbbHocPhan;
         private System.Windows.Forms.Label lblThongTin;
-        private System.Windows.Forms.Button btnIn;
     }
 }

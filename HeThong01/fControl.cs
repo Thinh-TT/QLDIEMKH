@@ -91,10 +91,6 @@ namespace HeThong01
             LoadForm(new fThongKeHP());
         }
 
-        private void taikhoantoolStripComboBox1_Click(object sender, EventArgs e)
-        {
-            LoadForm(new fAccount());
-        }
 
         private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
         {

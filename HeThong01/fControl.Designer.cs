@@ -42,7 +42,6 @@
             this.nhapDiemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thongKeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ThongkeSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.taikhoantoolStripComboBox1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thoatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
@@ -58,7 +57,6 @@
             this.homeToolStripMenuItem,
             this.adminToolStripMenuItem,
             this.giangViênToolStripMenuItem,
-            this.taikhoantoolStripComboBox1,
             this.thoatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -94,35 +92,35 @@
             // qLGiangVienToolStripMenuItem
             // 
             this.qLGiangVienToolStripMenuItem.Name = "qLGiangVienToolStripMenuItem";
-            this.qLGiangVienToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.qLGiangVienToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
             this.qLGiangVienToolStripMenuItem.Text = "QL &Giảng viên";
             this.qLGiangVienToolStripMenuItem.Click += new System.EventHandler(this.qLGiangVienToolStripMenuItem_Click);
             // 
             // qLKhoahocToolStripMenuItem1
             // 
             this.qLKhoahocToolStripMenuItem1.Name = "qLKhoahocToolStripMenuItem1";
-            this.qLKhoahocToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
+            this.qLKhoahocToolStripMenuItem1.Size = new System.Drawing.Size(202, 28);
             this.qLKhoahocToolStripMenuItem1.Text = "QL &Khóa học";
             this.qLKhoahocToolStripMenuItem1.Click += new System.EventHandler(this.qLKhoahocToolStripMenuItem1_Click);
             // 
             // qLSinhVienToolStripMenuItem
             // 
             this.qLSinhVienToolStripMenuItem.Name = "qLSinhVienToolStripMenuItem";
-            this.qLSinhVienToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.qLSinhVienToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
             this.qLSinhVienToolStripMenuItem.Text = "QL &Sinh viên";
             this.qLSinhVienToolStripMenuItem.Click += new System.EventHandler(this.qLSinhVienToolStripMenuItem_Click);
             // 
             // roleToolStripMenuItem
             // 
             this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
-            this.roleToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.roleToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
             this.roleToolStripMenuItem.Text = "Role";
             this.roleToolStripMenuItem.Click += new System.EventHandler(this.roleToolStripMenuItem_Click);
             // 
             // userToolStripMenuItem
             // 
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(202, 28);
             this.userToolStripMenuItem.Text = "User";
             this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
             // 
@@ -167,16 +165,6 @@
             this.ThongkeSVToolStripMenuItem.Size = new System.Drawing.Size(243, 28);
             this.ThongkeSVToolStripMenuItem.Text = "Thống kê &sinh viên";
             this.ThongkeSVToolStripMenuItem.Click += new System.EventHandler(this.ThongkeSVToolStripMenuItem_Click);
-            // 
-            // taikhoantoolStripComboBox1
-            // 
-            this.taikhoantoolStripComboBox1.Image = global::HeThong01.Properties.Resources.account;
-            this.taikhoantoolStripComboBox1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.taikhoantoolStripComboBox1.Name = "taikhoantoolStripComboBox1";
-            this.taikhoantoolStripComboBox1.Size = new System.Drawing.Size(143, 27);
-            this.taikhoantoolStripComboBox1.Text = "Tài &khoản";
-            this.taikhoantoolStripComboBox1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.taikhoantoolStripComboBox1.Click += new System.EventHandler(this.taikhoantoolStripComboBox1_Click);
             // 
             // thoatToolStripMenuItem
             // 
@@ -228,7 +216,6 @@
         private System.Windows.Forms.ToolStripMenuItem qLGiangVienToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem qLKhoahocToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem qLSinhVienToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem taikhoantoolStripComboBox1;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.ToolStripMenuItem nhapDiemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thongKeToolStripMenuItem;

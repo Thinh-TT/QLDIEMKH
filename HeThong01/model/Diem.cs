@@ -19,7 +19,7 @@ namespace HeThong01.model
         //[Required]
         //public int diem { get; set; }
         [Range(0, 10)]
-        public double? diem { get; set; }
+        public float? diem { get; set; }
         public string ghiChu {get;set; }
 
         //public virtual SinhVien SinhVien { get; set; }

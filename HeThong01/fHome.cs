@@ -27,9 +27,15 @@ namespace HeThong01
 
         private void fHome_Load(object sender, EventArgs e)
         {
+
         }
 
         private void btnNhapDiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
         {
 
         }

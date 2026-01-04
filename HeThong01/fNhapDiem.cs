@@ -158,17 +158,5 @@ namespace HeThong01
             lblThongTin.Text = "";
         }
 
-        private void btnIn_Click(object sender, EventArgs e)
-        {
-            if (cbbBaiKT.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vui lòng chọn bài kiểm tra!");
-                return;
-            }
-
-            string maBKT = cbbBaiKT.SelectedValue.ToString();
-            //f_InDiem f = new f_InDiem(); 
-            //f.ShowDialog();
-        }
     }
 }
